@@ -7,7 +7,7 @@ import 	_ "github.com/mattn/go-sqlite3"
 
 
 func BuildConnection() {
-	dbPath := "/home/geek/workspace/iTrace/data/exp/" +
+	dbPath := "/home/zzf/workspace/iTrace4/data/exp/" +
 		"Infinispan/rtm/Infinispan-req.db"
 
 	db, err := sql.Open("sqlite3", dbPath)

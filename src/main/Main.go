@@ -4,7 +4,7 @@ import "DbOperation"
 import "demo"
 
 func main(){
-	demo.Test()
+	demo.BuildDB()
 	DbOperation.BuildConnection()
 }
 
