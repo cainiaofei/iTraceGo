@@ -29,7 +29,17 @@ func ShowDBData() {
 	}
 
 	err = rows.Err()
-
+	stmt, err := db.Prepare("select name from foo where id=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer stmt.Close()
+	var name string
+	err = stmt.QueryRow("3").Scan(&name)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(name)
 }
 
 
